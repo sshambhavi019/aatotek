@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AATOTEK ENERGIA leadership team — experienced directors driving innovation and growth in the Indian battery industry." />
+  <title>Leadership — AATOTEK ENERGIA PRIVATE LIMITED</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .leader-card-premium {
+      background: var(--navy);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+    }
+    .leader-card-premium:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(217,4,41,0.2);
+    }
+    .leader-card-premium::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red-dark), var(--red-light));
+    }
+    .leader-avatar-section {
+      padding: 48px 32px 32px;
+      text-align: center;
+      background: linear-gradient(135deg, #0F172A, #1a0510);
+      position: relative;
+      overflow: hidden;
+    }
+    .leader-avatar-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 60%, rgba(217,4,41,0.12) 0%, transparent 70%);
+    }
+    .leader-avatar-big {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red-dark), var(--red));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      color: var(--white);
+      margin: 0 auto 20px;
+      border: 4px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 40px rgba(217,4,41,0.4), 0 0 0 8px rgba(217,4,41,0.08);
+      position: relative;
+      z-index: 1;
+      transition: var(--transition);
+    }
+    .leader-card-premium:hover .leader-avatar-big {
+      box-shadow: 0 16px 50px rgba(217,4,41,0.5), 0 0 0 12px rgba(217,4,41,0.1);
+      transform: scale(1.05);
+    }
+    .leader-info-section {
+      padding: 28px 32px 36px;
+    }
+    .leader-name-big {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .leader-role-big {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .leader-divider-big {
+      width: 48px; height: 2px;
+      background: linear-gradient(90deg, var(--red-dark), var(--red-light));
+      margin: 16px auto;
+    }
+    .leader-experience {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(217,4,41,0.1);
+      border: 1px solid rgba(217,4,41,0.2);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--red-light);
+      margin: 0 auto 20px;
+      width: fit-content;
+    }
+    .leader-bio-text {
+      font-size: 0.9rem;
+      color: var(--grey-400);
+      line-height: 1.75;
+      text-align: center;
+    }
+    .leader-stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-top: 24px;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 20px;
+    }
+    .leader-stat {
+      flex: 1;
+      text-align: center;
+      padding: 0 16px;
+      border-right: 1px solid var(--glass-border);
+    }
+    .leader-stat:last-child { border-right: none; }
+    .leader-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--red);
+      line-height: 1;
+    }
+    .leader-stat-label {
+      font-size: 0.7rem;
+      color: var(--grey-600);
+      margin-top: 4px;
+    }
+
+    .team-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .value-card {
+      padding: 32px 24px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(217,4,41,0.2);
+    }
+    .value-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .value-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .value-desc { font-size: 0.85rem; color: var(--grey-400); line-height: 1.65; }
+
+    @media(max-width:768px) {
+      .team-values { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+          <path d="M14 2L26 22H2L14 2Z" fill="white" opacity="0.9"/>
+          <path d="M14 8L22 22H6L14 8Z" fill="#D90429"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">AATOTEK ENERGIA</div>
+        <div class="nav-logo-tagline">Fresh &bull; Charge &bull; Start</div>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="contact.html#dealer" class="btn-dealer-nav btn">Dealer Enquiry</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Leadership</span>
+      </div>
+      <h1 class="page-hero-title">Our <span>Leadership</span> Team</h1>
+      <p class="page-hero-sub">Visionary leaders with decades of combined experience in the Indian and global battery industry driving AATOTEK's growth.</p>
+    </div>
+  </div>
+
+  <!-- Leadership Section -->
+  <section class="section-pad" style="background:var(--black);">
+    <div class="section-inner">
+
+      <div class="reveal" style="text-align:center;margin-bottom:56px;">
+        <div class="section-label" style="justify-content:center;">The Team Behind AATOTEK</div>
+        <h2 class="section-title">Experienced. <span>Driven. Trusted.</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;">Our founders and advisors bring unparalleled expertise in battery technology, sales, distribution and financial management to build a company that lasts.</p>
+      </div>
+
+      <div class="leaders-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));max-width:1050px;margin:0 auto;">
+
+        <!-- Director 1: Manish -->
+        <div class="leader-card-premium reveal reveal-delay-1">
+          <div class="leader-avatar-section">
+            <div class="leader-avatar-big">M</div>
+            <div class="leader-name-big">Mr. Manish</div>
+            <div class="leader-role-big">Founder &amp; Director</div>
+          </div>
+          <div class="leader-info-section">
+            <div class="leader-divider-big"></div>
+            <div class="leader-experience">⭐ 25 Years Industry Experience</div>
+            <p class="leader-bio-text">
+              Mr. Manish is the visionary founder of AATOTEK ENERGIA PRIVATE LIMITED, bringing over 25 years of deep expertise in battery sales and distribution with leading multinational companies. His extensive industry knowledge and strategic vision have been instrumental in establishing AATOTEK as a trusted name across India's battery market.
+            </p>
+            <div class="leader-stats-row">
+              <div class="leader-stat">
+                <div class="leader-stat-num">25+</div>
+                <div class="leader-stat-label">Years Exp.</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">2021</div>
+                <div class="leader-stat-label">Founded</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">MNC</div>
+                <div class="leader-stat-label">Background</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director 2: Mitesh Sharma -->
+        <div class="leader-card-premium reveal reveal-delay-2">
+          <div class="leader-avatar-section">
+            <div class="leader-avatar-big" style="background:linear-gradient(135deg,#1e3a5f,#0F172A);border-color:rgba(30,58,95,0.4);">MS</div>
+            <div class="leader-name-big">Mr. Mitesh Sharma</div>
+            <div class="leader-role-big">Director</div>
+          </div>
+          <div class="leader-info-section">
+            <div class="leader-divider-big"></div>
+            <div class="leader-experience">⭐ 15 Years Industry Experience</div>
+            <p class="leader-bio-text">
+              Mr. Mitesh Sharma brings 15 years of comprehensive experience in the Indian battery market to AATOTEK's leadership team. His deep understanding of domestic market dynamics, distribution networks and customer requirements has been critical in shaping the company's go-to-market strategy and dealer expansion across multiple states.
+            </p>
+            <div class="leader-stats-row">
+              <div class="leader-stat">
+                <div class="leader-stat-num">15+</div>
+                <div class="leader-stat-label">Years Exp.</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">India</div>
+                <div class="leader-stat-label">Market Focus</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">PAN</div>
+                <div class="leader-stat-label">Network</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Director 3: Sumit Dwivedi -->
+        <div class="leader-card-premium reveal reveal-delay-3">
+          <div class="leader-avatar-section">
+            <div class="leader-avatar-big" style="background:linear-gradient(135deg,#1a3a2a,#0a1f14);border-color:rgba(26,58,42,0.4);">SD</div>
+            <div class="leader-name-big">Mr. Sumit Dwivedi</div>
+            <div class="leader-role-big">Finance Advisor</div>
+          </div>
+          <div class="leader-info-section">
+            <div class="leader-divider-big"></div>
+            <div class="leader-experience">💼 Financial Strategy Expert</div>
+            <p class="leader-bio-text">
+              Mr. Sumit Dwivedi serves as Finance Advisor to AATOTEK ENERGIA, overseeing the company's financial planning, business strategy and capital management. His expertise in corporate finance and business development ensures AATOTEK's sustainable growth and sound financial governance as the company expands across India.
+            </p>
+            <div class="leader-stats-row">
+              <div class="leader-stat">
+                <div class="leader-stat-num">CFO</div>
+                <div class="leader-stat-label">Advisor Role</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">Fin.</div>
+                <div class="leader-stat-label">Planning</div>
+              </div>
+              <div class="leader-stat">
+                <div class="leader-stat-num">Biz</div>
+                <div class="leader-stat-label">Strategy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Values -->
+  <section class="section-pad" style="background:var(--navy);">
+    <div class="section-inner">
+      <div class="reveal" style="text-align:center;">
+        <div class="section-label" style="justify-content:center;">What Drives Us</div>
+        <h2 class="section-title">Leadership <span>Values</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;">The principles that guide every decision our leadership team makes in building AATOTEK ENERGIA.</p>
+      </div>
+      <div class="team-values">
+        <div class="value-card reveal reveal-delay-1">
+          <span class="value-icon">🎯</span>
+          <h3 class="value-title">Customer First</h3>
+          <p class="value-desc">Every product decision, pricing strategy and support initiative is made with the customer's success as the primary objective.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <span class="value-icon">🔍</span>
+          <h3 class="value-title">Transparency</h3>
+          <p class="value-desc">Open and honest relationships with dealers, distributors and customers form the foundation of everything we do.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <span class="value-icon">🚀</span>
+          <h3 class="value-title">Innovation</h3>
+          <p class="value-desc">Continuously investing in technology and product development to stay ahead of market needs and industry advancements.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-4">
+          <span class="value-icon">🏆</span>
+          <h3 class="value-title">Excellence</h3>
+          <p class="value-desc">Uncompromising commitment to quality at every level — from raw material selection to final product delivery.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-5">
+          <span class="value-icon">🤝</span>
+          <h3 class="value-title">Partnership</h3>
+          <p class="value-desc">Growing together with our dealer and distributor network — their success is AATOTEK's success.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-6">
+          <span class="value-icon">🌱</span>
+          <h3 class="value-title">Sustainability</h3>
+          <p class="value-desc">Building a business that creates lasting value for customers, partners and communities across India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-strip-inner">
+      <div class="stat-item">
+        <div class="stat-number" data-count="3" data-suffix="">3</div>
+        <div class="stat-label">Founding Leaders</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="40" data-suffix="+">40+</div>
+        <div class="stat-label">Years Combined Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="2021" data-suffix="">2021</div>
+        <div class="stat-label">Company Founded</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="100" data-suffix="%">100%</div>
+        <div class="stat-label">Committed to Quality</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Band -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <h2 class="cta-title">Want to Work With Our Team?</h2>
+      <p class="cta-sub">Reach out to discuss dealer opportunities, partnerships or any business enquiry with the AATOTEK leadership team.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-white">Contact Leadership</a>
+        <a href="about.html" class="btn btn-outline-white">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M14 2L26 22H2L14 2Z" fill="white" opacity="0.9"/>
+              <path d="M14 8L22 22H6L14 8Z" fill="#D90429"/>
+            </svg>
+          </div>
+          <div>
+            <div class="footer-company-name">AATOTEK ENERGIA<br>PRIVATE LIMITED</div>
+            <div class="footer-tagline">FRESH &bull; CHARGE &bull; START</div>
+          </div>
+        </div>
+        <p class="footer-desc">Premium battery solutions engineered for reliable performance, long life and superior technology. Manufacturing excellence from Haridwar, India.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/919795666786" class="social-btn" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.473-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          <a href="mailto:info@aatotekenergia.com" class="social-btn" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="products.html" class="footer-link">Products</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="leadership.html" class="footer-link">Leadership</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Products</h4>
+        <ul class="footer-links">
+          <li><a href="products.html" class="footer-link">Motorcycle Batteries</a></li>
+          <li><a href="products.html" class="footer-link">Auto Batteries</a></li>
+          <li><a href="products.html" class="footer-link">Inverter Batteries</a></li>
+          <li><a href="products.html" class="footer-link">E-Rickshaw Batteries</a></li>
+          <li><a href="products.html" class="footer-link">Lithium Batteries</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Contact Info</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">📍</div>
+          <div class="footer-contact-text"><strong>Address</strong>Shraddha Bhavan, Krishna Nagar,<br>Lucknow — 226012</div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">📞</div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+919795666786" style="color:inherit;">+91 97956 66786</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">✉️</div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:info@aatotekenergia.com" style="color:inherit;">info@aatotekenergia.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 AATOTEK ENERGIA PRIVATE LIMITED. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919795666786" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+  <button class="back-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
